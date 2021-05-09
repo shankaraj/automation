@@ -1,0 +1,407 @@
+---To find the xpath from console :
+
+$x("//*[@id="organic-div"]/form/a") 
+
+---To find the css from console :
+$("css_code") 
+
+---Syntax of xpath
+
+//div[@class='product-action']/button
+
+//button[@type='button']
+
+//tagname[@attribute='value']
+
+---Various way of writing xpath :
+
+//*[@attribute='value'] 
+
+---Below is the example of xpath
+
+//input[@autocomplete='username']
+//input[@autocomplete='current-password']
+//button[@type='submit']
+
+---Syntax's of CSS
+
+tagname[attribute='value']
+[attribute='value']
+tagname#id 
+tagname.classname
+
+--Css with class name traves to child example 
+.tableFixHead td:nth-child[4]
+
+---Regular expressions xpath
+
+//tagname[contains(@attribute,'value')] 
+
+---Regular expressions css
+
+tagname[attribute*='value'] 
+
+---Parent to child xpath mapping 
+
+//div[@class='lst-c']/div/div[2]/div/input
+//div[@class='sign-in-form-container']/form/div[2]/div/input/
+
+---- To move between the parent --> sibilings tag (Can be used interms of dynamic changes in the tag names)
+
+//*[@attribute='value']/following-sibiling::tagname[2]
+
+---- To move between the parent --> sibilings tag (Can be used interms of dynamic changes in the tag names)
+
+//*[@attribute='value']/parent::tagname
+
+Example 
+
+//*[@id='child_value']/parent::parent_tagname
+
+
+-----Selecting the element with text attribute 
+
+//*[text()='Join now']
+
+
+------writing css from class name (Note: whatever having the spaces need to replace with . )
+
+spicejey site :
+
+.classname
+
+.ui-state-default.ui-state-highlight.ui-state-active
+
+
+################################################
+
+----From Lectures (Point to be noted):
+
+-->	Classes should not have spaces- Compound classes cannot be accepted
+-->	Multipl values - Selenium identifies the first one- Scans from top left
+-->	Double quotes inside double quotes are not accepted
+-->	Xpath/CSS  can be defined in n number of ways
+-->	Rightclick copy on blue highlighted html code to generate xpath
+-->	Firepath depreciated from firefox- 
+-->	when xpath starts with html-Not reliable- Switch browser to get another one
+-->	There is no direct way to get CSS in chrome. You will find it in tool bar
+-->	Degrade browser to less firefox 55 to ge Firepath
+-->	$("") - for css ,    $x("")   or xpath
+-->	//tagName[@attribute='value']  - xpath syntax
+-->	tagName[attribute='value']  -CSS  tagName#id- CSS   tagname.classname- CSS
+-->	//tagName[contains(@attribute,'value')]  - xpath regular expression
+-->	tagName[Atrribute*='value'] - Css regular expression
+
+#################################################
+
+
+
+https://standardcharteredfuturestate.udemy.com/organization/home/
+
+https://rahulshettyacademy.com/AutomationPractice/
+https://rahulshettyacademy.com/dropdownsPractise/
+https://www.spicejet.com/
+https://rahulshettyacademy.com/seleniumPractise/#/
+https://jqueryui.com/droppable/
+https://the-internet.herokuapp.com
+https://www.rahulshettyacademy.com/AutomationPractice/
+
+mentor@rahulshettyacademy.com
+
+
+
+Maven repository :
+
+https://mvnrepository.com/artifact/org.testng/testng
+
+
+Jar location:
+D:\Automation\Workspace\Introduction\libs
+
+#####Configuration of Selenium GRID
+
+--HUB machine 
+
+cd C:\Users\Shankar Aj\Selenium_GRID
+java -jar selenium-server-standalone-3.141.59.jar -role hub
+
+--Node machine
+
+Check (System variable for java is configured )
+
+cd C:\Users\Shankar Aj\Selenium_GRID
+
+java -jar selenium-server-standalone-3.141.59.jar -role webdriver 
+
+java -Dwebdriver.chrome.driver="" -jar selenium-server-standalone-3.141.59 -role webdriver -hub http://localhost:4444/grid/console -port 5566
+
+
+http://192.168.0.129:4444/wd/hb
+
+
+java -jar selenium-server-standalone-3.14.0.jar -role node -hub http://192.168.1.125:2222/grid/register
+
+
+##Appium 
+
+https://youtu.be/Fx3ud5wMHYc
+
+
+
+###
+
+Selenium installatio :
+https://www.selenium.dev/downloads/
+
+TestNG installation :
+
+https://testng.org/doc/download.html
+
+Maven :
+https://mvnrepository.com/
+https://maven.apache.org/download.cgi
+
+Maven sure fire plugin 
+http://maven.apache.org/surefire/maven-surefire-plugin/usage.html
+
+Maven & TestNG integeration:
+
+https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html
+
+--To run specfic test in maven using testng pom.xml
+
+//To run maven test
+
+mvn compile
+mvn test
+mvn test -Dbrowser=chrome
+
+syntax: mvn test -P(profilename)
+example: mvn test -Psmoke
+
+In jenkins 
+mvn test -Dbrowser="$browser"
+
+
+
+####Jenkins download
+https://www.jenkins.io/download/
+
+cd D:\Automation\Workspace\Jenkins
+
+.war file download
+
+command: java -jar jenkins.war -httpPort=8080
+
+############# Java cheats
+
+Default,Public,Protected,Private
+
+Default = access method anywhere in the package 
+Private =  You cannot access method or variable outside the class of same package as well
+Public = Variable/Method as public : then you will have access across all 
+Protected = Protected 
+
+
+////Windows authentication in selenium:
+
+http://username:password@url
+
+//AuTO IT - will be used for uploaded files in the web
+
+Au3info- record window component objects
+
+Build Script -scite.exe
+
+Save it- .au3 extenstion
+
+Convert file into .exe by compiling .au3 file
+
+Call .exe file with Runtime class in java into your selenium tests
+
+#####
+
+Request him for automation resume preparation 
+
+mentor@rahulshettyacademy.com
+Linked in:
+https://www.linkedin.com/in/rahul-shetty-trainer/
+
+https://www.facebook.com/groups/RahulShettyAcademy/
+
+Telegram
+https://t.me/rahulshettyacademy
+
+
+https://www.youtube.com/c/RahulShettyAcademy
+
+
+##########################
+
+1. Selenium Design Patterns/Best Practices for Framework Design
+
+https://www.udemy.com/course/selenium-design-patterns-framework-design/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/selenium-design-patterns-framework-design/?referralCode=3B46BA77EF33E6C9044A
+
+
+
+2. Azure Devops Fundamentals for Testers -CI/CD+Project Boards
+
+https://www.udemy.com/course/azure-devops-fundamental/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/azure-devops-fundamental/?referralCode=787B5100944480E4DCD5
+
+
+
+
+
+3. Python SDET-Backend/ Rest API Automation with BDD Framework
+
+https://www.udemy.com/course/python-sdet-rest-api-automation/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/python-sdet-rest-api-automation/?referralCode=07DFF0AFC58A893CF6E4
+
+
+
+
+
+4. Devops Fundamentals- CI/CD with AWS +Docker+Ansible+Jenkins
+
+https://www.udemy.com/course/devops-fundamentals-aws/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/devops-fundamentals-aws/?referralCode=333875C2ACD329FD509B
+
+
+
+
+
+5. SDET/QA Automation Interview Kit + Java logic Programs
+
+https://www.udemy.com/course/qa-automation-interview-questions/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/qa-automation-interview-questions/?referralCode=BFC03F7A9989821811A8
+
+
+
+
+
+6. Robotic Process Automation(RPA) using UIPATH + Live Projects
+
+https://www.udemy.com/course/rpa-uipath/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/rpa-uipath/?referralCode=18539ACE13CA10B3F913
+
+
+
+
+
+7. Selenium Python Automation Testing from Scratch + Frameworks
+
+https://www.udemy.com/course/learn-selenium-automation-in-easy-python-language/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/learn-selenium-automation-in-easy-python-language/?referralCode=907494E3C21AF19DF472
+
+
+
+
+
+8. Rest API Automation with Java + Frameworks– Rest Assured
+
+https://www.udemy.com/course/rest-api-automation-testing-rest-assured/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/rest-api-automation-testing-rest-assured/?referralCode=5DC20F3F9AEC680CF129
+
+
+
+
+
+9. Appium – Mobile Automation from Scratch + Frameworks
+
+https://www.udemy.com/course/mobile-automation-using-appiumselenium-3/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/mobile-automation-using-appiumselenium-3/?referralCode=C46BF551F5B9EAF08E10
+
+
+
+10. Learn Protractor(Angular Testing) from scratch +Framework
+
+https://www.udemy.com/course/protractor-tutorial/?referralCode=4BD09EB80BA2B9E8FFEA
+
+https://www.udemy.com/course/protractor-tutorial/?couponCode=RAHULSHETTY2104
+
+
+
+11. Cypress-Modern Automation Testing from Scratch + Framework
+
+https://www.udemy.com/course/cypress-tutorial/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/cypress-tutorial/?referralCode=32996BF536115C960678
+
+
+
+12. Master Software Testing+Jira+Agile on Live App-Be a TeamLead
+
+https://www.udemy.com/course/learn-software-testing-in-practical-become-a-qa-expert/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/learn-software-testing-in-practical-become-a-qa-expert/?referralCode=B2901574D20A84F4F94F
+
+
+
+13. Learn JMETER from Scratch on Live Apps -Performance Testing
+
+https://www.udemy.com/course/learn-jmeter-from-scratch-performance-load-testing-tool/?couponCode=RAHULSHETTY2104
+https://www.udemy.com/course/learn-jmeter-from-scratch-performance-load-testing-tool/?referralCode=E29109A7BEC228EED509
+
+
+
+14. WebServices/Rest API Testing with SoapUI +Real time Projects
+
+https://www.udemy.com/course/webservices-testing-with-soap-ui/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/webservices-testing-with-soap-ui/?referralCode=A6461A7438563696BB77
+
+
+
+15. SDET/Test Architect Essentials -Road to Full stack QA
+
+https://www.udemy.com/course/sdettraining-testarchitect-fullstackqa/?referralCode=E76A8BC1A22903C614BE
+
+https://www.udemy.com/course/sdettraining-testarchitect-fullstackqa/?couponCode=RAHULSHETTY2104
+
+
+
+16. Cucumber with Java-Build Automation Framework in lesser code
+
+https://www.udemy.com/course/cucumber-tutorial/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/cucumber-tutorial/?referralCode=452C30D3B2EF720F0072
+
+
+
+17. Selenium WebDriver with Java -Basics to Advanced+Frameworks
+
+
+
+https://www.udemy.com/course/selenium-real-time-examplesinterview-questions/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/selenium-real-time-examplesinterview-questions/?referralCode=0D6919D2CF070539F2DA
+
+
+
+18. Learn SQL +Security(pen) testing from Scratch
+
+
+
+https://www.udemy.com/course/database-testing-tutorial/?couponCode=RAHULSHETTY2104
+
+https://www.udemy.com/course/database-testing-tutorial/?referralCode=23FB742C2BD00EC7A977
+
+
+
+19. Core java for Automation Testers + Interview Programs
+
+https://www.udemy.com/course/core-java-tutorials/?referralCode=DC96B2014338907EA1C2
+
+https://www.udemy.com/course/core-java-tutorials/?couponCode=RAHULSHETTY2104
+
